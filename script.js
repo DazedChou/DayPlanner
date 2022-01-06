@@ -10,24 +10,26 @@ for (let i = 0 ; i < hours.length ; i++){
     var rowEl = $('<div class = "row">');
     planner.append(rowEl);
 
+    //display time
     timeEl = $('<div class ="col-md-1 time-block">');
     timeEl.text(hours[i]);
     timeEl.attr("data-hour",i+9);
-
     rowEl.append(timeEl);
 
+    //create div for textarea
     noteEl = $('<div class = "col-md-10 description">');
     textEl = $('<textarea>');
     noteEl.append(textEl);
-
     rowEl.append(noteEl);
 
+    //create div for save button
     saveEl = $('<div class = "col-md-1">');
     buttonEl = $('<button class = "saveBtn" >');
     buttonEl.attr('data-index',i)
     saveEl.append(buttonEl);
     buttonEl.text("Save");
     rowEl.append(saveEl);
+
     timeSlots.push(rowEl);
 }
 console.log(timeSlots);
@@ -52,11 +54,9 @@ for (let i = 0 ; i < timeSlots.length ; i++){
     let timeblock = timeSlots[i].children().eq(0).attr("data-hour");
     if (timeblock < currentTime){
         timeSlots[i].children().eq(1).children().addClass("past");
-    }
-    if(timeblock == currentTime){
+    }else if(timeblock == currentTime){
         timeSlots[i].children().eq(1).children().addClass("present");
-    }
-    if (timeblock > currentTime){
+    }else{
         timeSlots[i].children().eq(1).children().addClass("future");
     }
 
