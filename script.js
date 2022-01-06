@@ -12,6 +12,8 @@ for (let i = 0 ; i < hours.length ; i++){
 
     timeEl = $('<div class ="col-md-1 time-block">');
     timeEl.text(hours[i]);
+    timeEl.attr("data-hour",i+9);
+
     rowEl.append(timeEl);
 
     noteEl = $('<div class = "col-md-10 description">');
@@ -20,9 +22,24 @@ for (let i = 0 ; i < hours.length ; i++){
 
     rowEl.append(noteEl);
 
-    saveEl = $('<div class = "col-md-1">')
-    buttonEl = $('<button class = "saveBtn">')
+    saveEl = $('<div class = "col-md-1">');
+    buttonEl = $('<button class = "saveBtn" >');
+    buttonEl.attr('data-index',i)
     saveEl.append(buttonEl);
     buttonEl.text("Save");
     rowEl.append(saveEl);
 }
+
+planner.on('click','.saveBtn',function(){
+    var element = $(this);
+
+    localStorage.setItem(element.attr('data-index'),$('.container-fluid').children().eq(element.attr('data-index')).children().value);
+    // console.log(element.closest(".time-block").value);
+    console.log(element.attr('data-index'));
+    // if (element.matches(".saveBtn")){
+
+    //     localStorage.setItem();
+    // }
+})
+
+//Color code past, present, future
