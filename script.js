@@ -32,19 +32,15 @@ for (let i = 0 ; i < hours.length ; i++){
 
     timeSlots.push(rowEl);
 }
-console.log(timeSlots);
 
+
+//event listener
 planner.on('click','.saveBtn',function(){
     var element = $(this);
+    var value = $(this).parent().siblings('.description').children().val();
+    console.log(value);
+    localStorage.setItem(element.attr('data-index'),value);
 
-    localStorage.setItem(element.attr('data-index'),$('.container-fluid').children().eq(element.attr('data-index')).children().value);
-    // console.log(element.closest(".time-block").value);
-    console.log(element.attr('data-index'));
-    // if (element.matches(".saveBtn")){
-
-    //     localStorage.setItem();
-    // }
-})
 
 //Color code past, present, future
 var currentTime = parseInt(moment().format("H"));
