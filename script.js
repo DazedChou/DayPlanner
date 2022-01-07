@@ -33,6 +33,12 @@ for (let i = 0 ; i < hours.length ; i++){
     timeSlots.push(rowEl);
 }
 
+//load in values from local storage
+
+$('.saveBtn').each(function(){
+    var key = $(this).attr("data-index");
+    $(this).parent().siblings('.description').children().val(localStorage.getItem(key));
+})
 
 //event listener
 planner.on('click','.saveBtn',function(){
