@@ -1,36 +1,14 @@
 # Day Planner
 
-One paragraph of project description goes here.
+This project is a day planner where the user can add important events in their respective time block so that the user can effectively manage his or her time. The timeblocks are color-coded using moment.js so that each timeblock is easily distinguishable based on the past, present, and future hours. And these events that the user saves is then saved into local storage, so when the page refreshes, the text present in the text area is preserved.
 
 ## Getting Started
+This application loads straight into the browser with no extra downloads required.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Screenshot Demo
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development environment running.
-
-Say what the step will be:
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
+![](./screenshot_1.jpg)
 
 
 ## Built With
@@ -38,6 +16,7 @@ End with an example of getting some data out of the system or using it for a lit
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [JQuery](https://jquery.com/)
 
 ## Deployed Link
 
@@ -46,20 +25,14 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Authors
 
-* **YOUR NAME** 
+* **David Chou** 
 
-- [Link to Portfolio Site](#)
+- [Link to Portfolio Site](https://dazedchou.github.io/My-Portfolio/)
 - [Link to Github](https://github.com/)
 - [Link to LinkedIn](https://www.linkedin.com/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License 
 
-## Acknowledgments
-
-* Hat tip to anyone whose code, libraries, packages, or UI was used  / inspired from
-* Inspiration
-* etc
