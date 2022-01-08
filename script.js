@@ -47,7 +47,7 @@ planner.on('click','.saveBtn',function(){
     console.log(value);
     localStorage.setItem(element.attr('data-index'),value);
 
-
+});
 //Color code past, present, future
 var currentTime = parseInt(moment().format("H"));
 
@@ -61,6 +61,4 @@ for (let i = 0 ; i < timeSlots.length ; i++){
     }else{
         timeSlots[i].children().eq(1).children().addClass("future");
     }
-
-}
-
+};
