@@ -8,7 +8,7 @@ This application loads straight into the browser with no extra downloads require
 
 ### Screenshot Demo
 
-![](./screenshot_1.jpg)
+![](./Screenshot_1.jpg)
 
 
 ## Built With
